@@ -1,0 +1,60 @@
+#!/bin/python3
+import requests
+import pyfiglet
+from rich import print
+import os
+from tqdm import tqdm
+import sys
+os.system("clear")
+ascii_banner = pyfiglet.figlet_format("DirBrute")
+print(ascii_banner)
+print('''
+[+][bold blue] DirBrute - Directory Brute Forcer[/]
+[+][bold blue] Author: cyberYarob[/]
+[+] 2026 \u00A9''')
+def lenght():
+    global url, wordlist_path
+    if len(sys.argv) == 1:
+        print("[*]Use -h or --help for info.")
+        exit()
+    elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
+        os.system("clear")
+        print('''                                  HELP
+	       	 [+][bold blue] DirBrute - Directory Brute Forcer[/]
+		 [+][bold blue] Author: cyberYarob[/]
+		 [+] 2026 \u00A9
+                 [bold blue] -u --url[/] put the url here like(http://testphp.vulnweb.com/)
+                 [bold blue] -w --wordlist[/] put the ath to the wordlist file like(/usr/share/wordlists/dirb/common.txt)
+                 Use: 
+                     dirbrute -u https://ex.com -w /path/to/file''')
+        exit()             
+    elif sys.argv[1] == "-u" or sys.argv[1] == "--url" and sys.argv[3] == "-w" or sys.argv[3]=="--wordlist":
+        url = sys.argv[2]
+        wordlist_path=sys.argv[4]
+    elif sys.argv[3] == "-u" or sys.argv[3] == "--url" and sys.argv[1] == "-w" or sys.argv[1]=="--wordlist":
+        url = sys.argv[4]
+        wordlist_path=sys.argv[2]
+    else :
+        print("The argument is not correct..!")
+        exit()
+def brute():
+    try:   
+        with open(wordlist_path, 'r') as file:
+            lines=file.readlines()
+            for line in tqdm(lines, desc=f"Scanning {url}",unit="words"):
+                word=line.strip()
+                full_url = url + word
+                response = requests.get(full_url)
+                if response.status_code == 200:
+                    print(f"{full_url}:[bold purple]{response.status_code}")
+                    pass
+                else:
+                    pass
+    except KeyboardInterrupt:
+        print("\n\aGoodBye...")
+    except Exception as e:
+        print(f"An error occurred")
+lenght()
+brute()
+
+
