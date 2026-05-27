@@ -2,4 +2,3 @@ requests
 pyfiglet
 rich
 tqdm
-sys
