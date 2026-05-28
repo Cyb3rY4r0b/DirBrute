@@ -21,24 +21,24 @@ Follow these steps to get the tool running on your machine:
 git clone [https://github.com/Cyb3rY4r0b/DirBrute.git](https://github.com/Cyb3rY4r0b/DirBrute.git)
 cd DirBrute
 ```                                                                                                                                        
-2️⃣ Prepare the environment                                                                                                                 
+### 2️⃣ Prepare the environment                                                                                                                 
 Make the scripts executable and run the preparation script to install dependencies:                                                        
 ```bash
 chmod +x dirbrute prepare.sh
 ./prepare.sh
 ```
-3️⃣ Run the tool                                                                                                                            
+### 3️⃣ Run the tool                                                                                                                            
 ```bash
 dirbrute
 ```
 
-##✨ Features                                                                                                                              
+## ✨ Features                                                                                                                             
 [x] Fast directory scanning.                                                                                                               
 [x] Easy to setup and use.                                                                                                                 
 [x] Compatible with Linux (Parrot, Kali, Ubuntu).                                                                                          
 [x] Supports custom wordlists.                                                                                                             
-##👤 Author                                                                                                                                
+## 👤 Author                                                                                                                               
 Developed by Yarob (Cyb3rY4r0b)                                                                                                            
 Identity: Cybersecurity Enthusiast & Developer.                                                                                            
-##⚠️ Disclaimer                                                                                                                            
+## ⚠️ Disclaimer                                                                                                                           
 This tool is for educational purposes and ethical hacking only. Use it at your own risk. The developer is not responsible for any misuse.
