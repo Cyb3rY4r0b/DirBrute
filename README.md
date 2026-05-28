@@ -9,7 +9,7 @@ Fast and Simple Directory Brute-forcing Tool for Web Pentesting
 
 ## 📖 Description
 DirBrute is a powerful yet simple tool designed to discover hidden directories and files on web servers. It helps security researchers and bug bounty hunters find sensitive paths that are not linked anywhere on the website.
-
+![How it works](screen.)
 ---
 
 ## 🚀 Installation & Usage
