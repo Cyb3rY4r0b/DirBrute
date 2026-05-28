@@ -53,7 +53,7 @@ def brute():
     except KeyboardInterrupt:
         print("\n\aGoodBye...")
     except Exception as e:
-        print(f"An error occurred")
+        print(f"An error occurred:{e}")
 lenght()
 brute()
 
