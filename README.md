@@ -18,7 +18,7 @@ Follow these steps to get the tool running on your machine:
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone [https://github.com/Cyb3rY4r0b/DirBrute.git](https://github.com/Cyb3rY4r0b/DirBrute.git)
+git clone https://github.com/Cyb3rY4r0b/DirBrute.git
 cd DirBrute
 ```                                                                                                                                        
 ### 2️⃣ Prepare the environment                                                                                                                 
